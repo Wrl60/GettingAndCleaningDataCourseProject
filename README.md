@@ -1,3 +1,3 @@
 # GettingAndCleaningDataCourseProject
 
-This respository is submit project for the Getting and Cleaning Data course
+This respository is for me to submit my final project for the Getting and Cleaning Data course

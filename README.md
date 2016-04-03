@@ -1,9 +1,9 @@
 run_analysis script documentation
+======================================
 
-This script will create a tidy dataset summarizing the data found in the Samsung phone analysis decribed below: 
+This script will create a tidy dataset summarizing the data found in the Samsung phone analysis decribed as follows.
 The experiments have been carried out with a group of 30 volunteers within an age bracket of 19-48 years. Each person performed six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) wearing a smartphone (Samsung Galaxy S II) on the waist. Using its embedded accelerometer and gyroscope, we captured 3-axial linear acceleration and 3-axial angular velocity at a constant rate of 50Hz. The experiments have been video-recorded to label the data manually. The obtained dataset has been randomly partitioned into two sets, where 70% of the volunteers was selected for generating the training data and 30% the test data. 
-The sensor signals (accelerometer and gyroscope) were pre-processed by applying noise filters and then sampled in fixed-width sliding windows of 2.56 sec and 50% overlap (128 readings/window). The sensor acceleration signal, which has gravitational and body motion components, was separated using a Butterworth low-pass filter into body acceleration and gravity. The gravitational force is assumed to have only low frequency components, therefore a filter with 0.3 Hz cutoff frequency was used. From each window, a vector of features was obtained by calculating variables from the time and frequency domain. See 'features_info.txt' for more details. 
-
+The sensor signals (accelerometer and gyroscope) were pre-processed by applying noise filters and then sampled in fixed-width sliding windows of 2.56 sec and 50% overlap (128 readings/window). The sensor acceleration signal, which has gravitational and body motion components, was separated using a Butterworth low-pass filter into body acceleration and gravity. The gravitational force is assumed to have only low frequency components, therefore a filter with 0.3 Hz cutoff frequency was used. From each window, a vector of features was obtained by calculating variables from the time and frequency domain. 
 
 For each record it is provided:
 ======================================
@@ -13,9 +13,9 @@ For each record it is provided:
 - A 561-feature vector with time and frequency domain variables. 
 - Its activity label. 
 - An identifier of the subject who carried out the experiment.
-- 
 
-********* High level summary of process:
+High level summary of script:
+======================================
 1.	Tidy the “train” data with descriptive column names and adding a column to identify the activity 
 2.	Tidy the “test” data with descriptive column names and adding a column to identify the activity
 3.	Combine the two datasets into one dataset
@@ -23,8 +23,9 @@ For each record it is provided:
 5.	Group the data by subject and activity
 6.	Summarize by the means for all the columns in the dataset
 7.	Write the data to a text file: run_analysis.txt 
-********* Script Algorithm
-This script works follows the following process (all code with comments can be found in run_analysis.R)
+
+Script Algorithm:
+======================================
 1.	Sets the working directly to ensure that the files can be found and saved in correct place.
 2.	Loads “dplyr” library to be used for data manipulations
 3.	Loads the file, x_train.txt, which contains the raw data for the readings described above.
@@ -56,6 +57,7 @@ This script works follows the following process (all code with comments can be f
 29.	Creates a dataset, analyzedata, which does a group by subject and activity for the final tidy dataset
 30.	Creates a dataset, run_analysis, by summarizing the data in step 20
 31.	Exports the dataset to a text file: run_analysis.txt
+
 The datasets used include the following files:
 =========================================
 -	'features_info.txt': Shows information about the variables used on the feature vector.
